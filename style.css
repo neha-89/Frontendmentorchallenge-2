@@ -1,0 +1,234 @@
+body {
+  font-family: 'Spartan', sans-serif;
+}
+
+section {
+  background-color: #ffffff;
+  min-height: 100vh;
+  background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+}
+
+.testimonial--content {
+  padding-top: 127px;
+  padding-bottom: 100px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.71429px;
+  margin-bottom: 15px;
+  color: #512051;
+}
+
+.sub-title {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.5px;
+  color: #927B91;
+}
+
+.container {
+  max-width: 1110px;
+  padding: 0 25px;
+  margin: auto;
+}
+
+.card {
+  /* height: fit-content; commented for fem purpose => doen't work with screenshot */
+  height: 154px;
+  background: #512051;
+  border-radius: 8px;
+  padding: 40px 32px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-right: 23px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.header-grid {
+  margin-bottom: 72px;
+}
+
+.header-grid .col-5 {
+  grid-column: 1 / 6;
+}
+
+.header-grid .col-6 {
+  grid-column: 7 / 13;
+}
+
+.card-grid {
+  grid-gap: 30px;
+}
+
+.card:nth-child(2) {
+  margin-top: 16px;
+}
+
+.card:nth-child(3) {
+  margin-top: 32px;
+}
+
+.card--customer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.customer--info {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.customer--info .certification {
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+  color: hsl(333, 80%, 67%)
+}
+
+.testimony {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.232143px;
+  color: #FFFFFF;
+}
+
+.rating {
+  background-color: #F7F2F7;
+  border-radius: 8px;
+  padding: 20px 32px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  color: #512051;
+  width: 381px;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rating:nth-child(1), .rating:nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.rating:nth-child(2) {
+  align-self: center;
+}
+
+.rating:nth-child(3) {
+  align-self: flex-end;
+}
+
+.ratings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+
+.stars-container {
+  width: 117px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 32px;
+}
+
+.star {
+  display: block;
+  background-image: url('./images/icon-star.svg');
+  background-position: center;
+  background-size: cover;
+  height: 16px;
+  width: 16px;
+}
+
+@media only screen and (max-width: 850px) {
+  .grid {
+      grid-template-columns: 1fr;
+  }
+
+  .col-5, .col-6 {
+      grid-column: span 1 !important;
+  }
+
+  .card-grid {
+      grid-gap: 16px;
+  }
+  
+  .ratings-container {
+      display: block;
+  }
+
+  .stars-container {
+      margin: 0;
+      margin-bottom: 16px;
+  }
+
+  .header-grid {
+      grid-gap: 40px;
+      margin-bottom: 49px;
+  }
+
+  .rating {
+      width: auto;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      height: fit-content
+  }
+
+  .card:nth-child(2) {
+      margin-top: 0;
+  }
+  
+  .card:nth-child(3) {
+      margin-top: 0;
+  }
+
+  h1 {
+      font-size: 32px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: -1.14286px;
+      margin-bottom: 20px;
+
+      color: #512051;
+  }
+
+  .sub-title {
+      text-align: center;
+  }
+
+  section {
+      background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+  }
+}
